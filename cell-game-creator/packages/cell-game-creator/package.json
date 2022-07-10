@@ -1,0 +1,43 @@
+{
+  "name": "@apika_luca/cell-game-creator",
+  "version": "0.0.1",
+  "description": "A cell game creator",
+  "main": "index.cjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs",
+      "default": "./index.cjs",
+      "node": "./index.cjs"
+    },
+    "./utils": {
+      "import": "./utils.mjs",
+      "require": "./utils.cjs",
+      "default": "./utils.cjs",
+      "node": "./utils.cjs"
+    }
+  },
+  "devDependencies": {
+    "typescript": "^4.7.2"
+  },
+  "author": "Apika Luca",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "_c": "concurrently -n \"CJS,ESM\" -c \"bgGreen.bold,bgBlue.bold\" --raw",
+    "dev": "concurrently --hide \"CJS\" -n \"CJS,ESM\" \"npm run dev:cjs --silent\" \"npm run dev:esm --silent\"",
+    "dev:cjs": "npx tsc -p tsconfig.cjs.json --watch",
+    "dev:esm": "npx tsc -p tsconfig.esm.json --watch",
+    "build": "npm run _c --silent -- \"npm run build:cjs\" \"npm run build:esm\" && npm run postbuild:custom --silent",
+    "build:cjs": "echo \"-----------------\n    Build CJS\n-----------------\" && npx tsc -p tsconfig.cjs.json",
+    "build:esm": "echo \"-----------------\n    Build ESM\n-----------------\" && npx tsc -p tsconfig.esm.json",
+    "postbuild:custom": "",
+    "postbuild:cjs": "echo \"-----------------\n  PostBuild CJS\n-----------------\" && npx ef-tspm --tsconfig ./tsconfig.cjs.json",
+    "postbuild:esm": "echo \"-----------------\n  PostBuild ESM\n-----------------\" && npx ef-tspm --tsconfig ./tsconfig.esm.json"
+  },
+  "dependencies": {
+    "@ef-carbon/tspm": "^2.2.5",
+    "fast-quadtree-ts": "^0.0.13",
+    "tslib": "^2.4.0"
+  }
+}

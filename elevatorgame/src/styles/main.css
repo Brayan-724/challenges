@@ -1,0 +1,52 @@
+:root {
+  --floor-height: 64px;
+  --floor-info-background: #777;
+  --floor-info-color: #DDD;
+  --floor-persons-background: #DDD;
+
+  --floor-button-active: #5D6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+
+  font-family: sans;
+}
+
+html {
+  background: #EEE;
+}
+
+.material-icons, i.mat {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+
+#world {
+  position: relative;
+  background: #000;
+}
+

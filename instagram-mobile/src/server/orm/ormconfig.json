@@ -1,0 +1,10 @@
+{
+  "type": "postgres",
+  "host": "ec2-54-156-110-139.compute-1.amazonaws.com",
+  "port": 5432,
+  "username": "iapiaidgkqfmpi",
+  "password": "6c2d9175b842caa839bcf38847677292c8811b43959fc3c751ba99f53d1d05f1",
+  "database": "d8chlpg1gjiikq",
+  "synchronize": true,
+  "logging": false
+}

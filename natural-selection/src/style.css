@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #555;
+}
+
+canvas {
+  width: 100%;
+}
+
+#app {
+  width: min(100vw, 1200px, calc(100vh - 2rem));
+  height: calc(100vh - 2rem);
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  /* Background tinted glass */
+  background-image: linear-gradient(144deg, rgba(200, 200, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 100%);
+}

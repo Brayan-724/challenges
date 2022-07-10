@@ -1,0 +1,48 @@
+#floors {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+}
+
+.floor {
+  background: #999;
+  display: flex;
+}
+
+.floor-info {
+  padding: 0 0.3rem;
+  background: #777;
+  color: #DDD;
+  display: flex;
+  gap: .75rem;
+  align-items: center;
+}
+
+.floor-num {
+  font-size: 24px;
+}
+
+.floor-button.active {
+  color: var(--floor-button-active)
+}
+
+.floor-button.invisible {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.floor-persons-space {
+  display: inline-flex;
+  justify-content: center;
+  font-size: 22px;
+  color: white;
+  width: 150px;
+  height: var(--floor-height);
+}
+
+.floor-space {
+  background: linear-gradient(180deg, #777, #999, #777);
+  display: inline-block;
+  width: 100%;
+  height: var(--floor-height);
+}

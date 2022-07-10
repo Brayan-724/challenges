@@ -1,0 +1,17 @@
+#elevators {
+  position: absolute;
+  top: 3px;
+  left: -100%;
+}
+
+.elevator {
+  position: absolute;
+  top: 0px;
+  transition: top .6s cubic-bezier(0.6, 0.01, 0.58, 1);
+
+  display: inline-block;
+  width: 52px;
+  height: 58px;
+
+  background: #F00;
+}

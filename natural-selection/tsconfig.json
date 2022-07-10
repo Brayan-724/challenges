@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "importHelpers": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "Node",
+    "strict": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"],
+      
+      "!abstract": ["./src/abstract/index"],
+      "!abstract/*": ["./src/abstract/*"],
+      
+      "!engine": ["./src/engine/index"],
+      "!engine/*": ["./src/engine/*"],
+      
+      "!game": ["./src/game/index"],
+      "!game/*": ["./src/game/*"],
+      
+      "!base": ["src/engine/base/index"],
+      "!base/*": ["src/engine/base/*"],
+      
+      "!prefabs": ["./src/game/prefabs/index"],
+      "!prefabs/*": ["./src/game/prefabs/*"],
+      
+      "!hot": ["./src/hot/index"],
+      "!hot/*": ["./src/hot/*"],
+
+      "!system": ["./src/game/system/index"],
+      "!system/*": ["./src/game/system/*"],
+      
+      "!internal": ["src/engine/internal/index"],
+      "!internal/*": ["src/engine/internal/*"],
+    },
+  },
+  "include": ["src"]
+}
